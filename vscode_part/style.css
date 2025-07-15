@@ -7,83 +7,185 @@ body {
 }
 
 .header {
-  background-image: linear-gradient( skyblue, white);
-  color:white;
-  padding:20px 0;
+  background-image: linear-gradient(skyblue, white);
+  color: white;
+  padding: 20px 0;
   display: flex;
   justify-content: space-around;
 }
+.search-box {
+  height: 20px;
+  border-radius: 5px;
+  width: 200px;
+  border: 1px solid #d2dde0; /* you missed 'solid' and width */
+  padding: 5px;
+  margin-top: 2rem;
+}
+.search-box::placeholder{
+    color: skyblue;
+}
 
-.toolbar{
-    display: flex;
-    flex-wrap: wrap;
-    gap:10px;
-    padding:20px;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+/* .search-box[type="text"]{
+    color:skyblue;
+} */
+.filter-btn {
+  height: 30px;
+  border-radius: 5px;
+  width: 70px;
+  border: #d2dde0;
+  padding: 5px;
+  margin-top: 2rem;
+  background-color: #ffffff;
+  color: skyblue;
 }
-.toolbar select{
-    background-color: skyblue;
-    color: #ffffff;
-     border: none;
-    padding: 5px;
-    border-radius: 5px;
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
-label{
-    color:rgb(36, 173, 190)
+.toolbar select {
+  background-color: skyblue;
+  color: #ffffff;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
 }
-.add_btn{
-    background-color: skyblue;
-    color: #f8f9fa;
-    border: none;
-    padding: 7px;
-    border-radius: 5px;
+label {
+  color: rgb(36, 173, 190);
+}
+.add_btn {
+  background-color: skyblue;
+  color: #f8f9fa;
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
 }
 
 /* employe cards */
 
-.emaployee_cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
+.employee_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
 }
 
-.card{
-    background-color: white;
-     border-radius: 8px;
-     padding: 15px;
-     /* /////////////////// */
-    transition:transform 0.2s ease;
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 5rem;
+  /* /////////////////// */
+  transition: transform 0.2s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.card:hover{
-    transform: scale(1.02);
+.card:hover {
+  transform: scale(1.02);
 }
-.card p{
-    margin:10px 0
+.card p {
+  margin: 10px 0;
+  color: skyblue;
+  font-weight: bold;
 }
-.card button{
-    padding:6px 12px;
+.card button {
+  padding: 6px 12px;
 }
 /* ///////////////////// */
-.card button:first-of-type{
-    background-color: rgb(107, 205, 235);
-    color:white
+.card button:first-of-type {
+  background-color: rgb(107, 205, 235);
+  color: white;
+  border: none;
+  border-radius: 3px;
 }
-.card button:last-of-type{
-    background-color: red;
-    color:white
+.card button:last-of-type {
+  background-color: red;
+  color: white;
+   border: none;
+   border-radius: 3px;
 }
 
 /* footer */
-footer{
-    text-align: center;
-     background-image: linear-gradient(to bottom, #007bff, #d2dde0);
-    height:4rem;
-    color:white;
-    font-weight: bold;
-    padding: 15px;
-    margin-top: 15rem;
+footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom, skyblue, #d2dde0);
+  height: 4rem;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  margin-top: 10rem;
+}
+
+/* 
+form container */
+
+.form_container {
+  /* border: 1px solid red; */
+  max-width: 450px;
+  height: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom, white, skyblue);
+}
+
+.form_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(41, 156, 202);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: red;
+  color: #f8f9fa;
+}
+.submit-btn {
+  background-color: rgb(15, 168, 228);
+  color: #f8f9fa;
 }

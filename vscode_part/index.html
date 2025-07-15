@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="Stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- Header -->
     <div class="header">
       <h1>Employee Directory</h1>
-      <input type="text" placeholder="search by name or email" />
-      <button>Filter</button>
+      <input class = "search-box" type="text" placeholder="search by name or email" />
+      <button class = "filter-btn">Filter</button>
     </div>
     <!-- Midller part -->
     <div class="toolbar">
@@ -30,14 +30,13 @@
         <option>100</option>
       </select>
 
-      <button class="add_btn">Add Employee</button>
+      <button onclick="window.location.href='form.html'" class="add_btn">
+        Add Employee
+      </button>
     </div>
     <!-- Employee cards -->
-    <div class="emaployee_cards">
-      <div
-        class="card"
-        style="border: 1px solid red; height: 10rem; width: 15rem"
-      >
+    <div class="employee_container">
+      <div class="card" style="height: 10rem; width: 15rem">
         <p><stong>Nikita Patel</stong></p>
         <p>Email: nikita@gmail.com</p>
         <p>Role: Manager</p>
@@ -45,10 +44,7 @@
         <button>Delete</button>
       </div>
 
-      <div
-        class="card"
-        style="border: 1px solid red; height: 10rem; width: 15rem"
-      >
+      <div class="card" style="height: 10rem; width: 15rem">
         <p><stong>Nikita Patel</stong></p>
         <p>Email: nikita@gmail.com</p>
         <p>Role: Manager</p>
@@ -56,10 +52,7 @@
         <button>Delete</button>
       </div>
 
-      <div
-        class="card"
-        style="border: 1px solid red; height: 10rem; width: 15rem"
-      >
+      <div class="card" style="height: 10rem; width: 15rem">
         <p><stong>Nikita Patel</stong></p>
         <p>Email: nikita@gmail.com</p>
         <p>Role: Manager</p>
