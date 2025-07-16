@@ -10,8 +10,33 @@
     <!-- Header -->
     <div class="header">
       <h1>Employee Directory</h1>
-      <input class = "search-box" type="text" placeholder="search by name or email" />
-      <button class = "filter-btn">Filter</button>
+      <input
+        class="search-box"
+        type="text"
+        placeholder="search by name or email"
+      />
+      <button class="filter-btn" onclick="openFilterPopup()">Filter</button>
+      <!-- filter popup -->
+      <div id="filterPopup" class = "popup">
+        <div class="popupContent">
+          <span class="close" onclick="closeFilterPopup()">&times;</span>
+          <h3>Filter Employee</h3>
+
+          <label>First Name: </label>
+          <input type="text" id="filterFirstName" required/>
+
+          <label>Department: </label>
+          <input type="text" id="filterDepartment" />
+
+          <label>Role: </label>
+          <input type="text" id="filterRole" />
+
+          <div class="popup-actions">
+            <button onclick="applyFilter()">Apply</button>
+            <button onclick="resetFilter()">Reset</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Midller part -->
     <div class="toolbar">
@@ -35,8 +60,8 @@
       </button>
     </div>
     <!-- Employee cards -->
-    <div class="employee_container">
-      <div class="card" style="height: 10rem; width: 15rem">
+    <div id = "employeeContainer" class="employee_container">
+      <!-- <div class="card" style="height: 10rem; width: 15rem">
         <p><stong>Nikita Patel</stong></p>
         <p>Email: nikita@gmail.com</p>
         <p>Role: Manager</p>
@@ -58,12 +83,19 @@
         <p>Role: Manager</p>
         <button>Edit</button>
         <button>Delete</button>
-      </div>
+      </div> -->
+
+
+      <!-- cards will be injected here dynamically using JS -->
+
     </div>
 
     <!-- Footer -->
     <footer>
       <p>@ 2025 Employee Directory App. Developed By Nikita</p>
     </footer>
+
+    <!-- javascript -->
+     <script src = "./main.js"></script>
   </body>
 </html>
