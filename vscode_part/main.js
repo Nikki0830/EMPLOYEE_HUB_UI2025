@@ -26,6 +26,16 @@ const employees = [
   },
 ];
 
+//save the default employees on first load if not already in localstorage
+// if (!localStorage.getItem("employees")) {
+//   localStorage.setItem("employees", JSON.stringify(employees));
+// }
+
+// get the localStorage data
+function saveEmployeesToLocalStorage() {
+  localStorage.setItem("employees", JSON.stringify(employees));
+}
+
 // Getting cards
 function renderEmployees(data = employees) {
   const container = document.getElementById("employeeContainer");
@@ -93,4 +103,18 @@ function applyFilter() {
   });
 
   renderEmployees(filtered);
+  closeFilterPopup(); // Optional: hides the popup after applying filter
+}
+
+//rest filter
+function resetFilter() {
+  // Clear all input fields
+  // const reste =
+  document.getElementById("filterFirstName").value = "";
+  document.getElementById("filterDepartment").value = "";
+  document.getElementById("filterRole").value = "";
+
+  // Re-render all employees
+  //   renderEmployees(reste);
+  renderEmployees();
 }
