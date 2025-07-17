@@ -77,8 +77,23 @@ function closeFilterPopup() {
   document.getElementById("filterPopup").style.display = "none";
 }
 
-// filter main logic
+// filter main logics
 
+//Search email logic
+function searchByEmail() {
+  const emailInput = document
+    .getElementById("searchBox")
+    .value.toLowerCase()
+    .trim();
+
+  const filterSearchEmailInput = employees.filter((emp) =>
+    emp.email.toLowerCase().includes(emailInput)
+  );
+
+  renderEmployees(filterSearchEmailInput);
+}
+
+//Filter button logic
 function applyFilter() {
   const firstName = document
     .getElementById("filterFirstName")
@@ -117,5 +132,5 @@ function resetFilter() {
   // Re-render all employees
   //   renderEmployees(reste);
   renderEmployees();
-//   closeFilterPopup(); //optional
+  //   closeFilterPopup(); //optional
 }

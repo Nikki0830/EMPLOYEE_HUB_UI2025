@@ -11,19 +11,21 @@
     <div class="header">
       <h1>Employee Directory</h1>
       <input
+        id="searchBox"
         class="search-box"
         type="text"
         placeholder="Search by name or email"
+        onkeyup="searchByEmail()"
       />
       <button class="filter-btn" onclick="openFilterPopup()">Filter</button>
       <!-- filter popup -->
-      <div id="filterPopup" class = "popup">
+      <div id="filterPopup" class="popup">
         <div class="popupContent">
           <span class="close" onclick="closeFilterPopup()">&times;</span>
           <h3>Filter Employee</h3>
 
           <label>First Name: </label>
-          <input type="text" id="filterFirstName" required/>
+          <input type="text" id="filterFirstName" required />
 
           <label>Department: </label>
           <input type="text" id="filterDepartment" />
@@ -60,7 +62,7 @@
       </button>
     </div>
     <!-- Employee cards -->
-    <div id = "employeeContainer" class="employee_container">
+    <div id="employeeContainer" class="employee_container">
       <!-- <div class="card" style="height: 10rem; width: 15rem">
         <p><stong>Nikita Patel</stong></p>
         <p>Email: nikita@gmail.com</p>
@@ -85,9 +87,7 @@
         <button>Delete</button>
       </div> -->
 
-
       <!-- cards will be injected here dynamically using JS -->
-
     </div>
 
     <!-- Footer -->
@@ -96,6 +96,6 @@
     </footer>
 
     <!-- javascript -->
-     <script src = "./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
