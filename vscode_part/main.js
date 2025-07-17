@@ -32,9 +32,9 @@ const employees = [
 // }
 
 // get the localStorage data
-function saveEmployeesToLocalStorage() {
-  localStorage.setItem("employees", JSON.stringify(employees));
-}
+// function saveEmployeesToLocalStorage() {
+//   localStorage.setItem("employees", JSON.stringify(employees));
+// }
 
 // Getting cards
 function renderEmployees(data = employees) {
@@ -45,13 +45,13 @@ function renderEmployees(data = employees) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-        <p id = "filterFirstName"><strong>${emp.firstName} ${emp.lastName}</strong></p>
-        <p>Email: ${emp.email}</p>
-        <p id = "filterDepartment">Department: ${emp.department}</p>
-        <p id = "filterRole">Role: ${emp.role}</p>
-        <button onclick="editEmployee(${emp.id})">Edit</button>
-        <button onclick="deleteEmployee(${emp.id})">Delete</button>
-      `;
+  <p><strong>${emp.firstName} ${emp.lastName}</strong></p>
+  <p>Email: ${emp.email}</p>
+  <p>Department: ${emp.department}</p>
+  <p>Role: ${emp.role}</p>
+  <button onclick="editEmployee(${emp.id})">Edit</button>
+  <button onclick="deleteEmployee(${emp.id})">Delete</button>
+`;
     container.appendChild(card);
   });
 }
@@ -117,4 +117,5 @@ function resetFilter() {
   // Re-render all employees
   //   renderEmployees(reste);
   renderEmployees();
+//   closeFilterPopup(); //optional
 }
