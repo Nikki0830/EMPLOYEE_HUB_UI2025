@@ -134,3 +134,14 @@ function resetFilter() {
   renderEmployees();
   //   closeFilterPopup(); //optional
 }
+
+///sorting logic for firstname and department
+
+const sortSelect = document.getElementById("sortSelect");
+
+sortSelect.addEventListener("change", () => {
+  const sortBy = sortSelect.value;
+
+  let sortedEmployee = [...employees]; //clone original array or make a copy of original array.
+  
+});
