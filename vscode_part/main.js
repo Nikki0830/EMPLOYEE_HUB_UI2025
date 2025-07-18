@@ -143,5 +143,12 @@ sortSelect.addEventListener("change", () => {
   const sortBy = sortSelect.value;
 
   let sortedEmployee = [...employees]; //clone original array or make a copy of original array.
-  
+
+  if (sortBy === "firstName") {
+    sortedEmployee.sort((a, b) => a.firstName.localeCompare(b.firstName));
+  } else if (sortBy === "department") {
+    sortedEmployee.sort((a, b) => a.department.localeCompare(b.department));
+  }
+
+  renderEmployees(sortedEmployee);
 });
